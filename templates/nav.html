@@ -1,0 +1,52 @@
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary custom-navbar-height fixed-top py-4 px-4">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'bank:home' %}">
+            <img src="static/img/logobank.png" alt="Logo" width="300" height="80" class="d-inline-block align-text-top">
+          </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'bank:home' %}">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Branches
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Kochi">Kochi</a></li>
+              <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Kottayam">Kottayam</a></li>
+              <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Kannur">Kannur</a></li>
+              <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Thiruvananthapuram">Thiruvananthapuram</a></li>
+              <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Thrissur">Thrissur</a></li>
+            </ul>
+          </li>
+  
+        </ul>
+        <div class="navbar-nav ms-auto">
+
+          
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <h4 class="nav-link">Hello {{user.username}}</h4> 
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'credentials:logout' %}">Logout</a>
+        </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'credentials:register' %}">Register</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'credentials:login' %}">Login</a>
+        </li>
+          {% endif %}
+            
+           
+        </div>
+      </div>
+    </div>
+  </nav>

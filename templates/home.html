@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+<br><br>
+<!-- <div>
+    <img src="{% static 'img/bannerbank.png' %}" alt="Our Products" width="1295px" height="450px">
+</div> -->
+
+<div
+class="container d-flex justify-content-center align-items-center"
+style="height: 50vh"
+>
+<a class="btn btn-danger" href="{% url 'credentials:login' %}">Start Your Journey with Us</a>
+</div>
+{% endblock content %}
+    

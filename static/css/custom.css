@@ -1,0 +1,42 @@
+.navbar {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-navbar-height {
+  height: 80px;
+}
+
+.nav-item{
+    letter-spacing: .2em;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+/* html, body {
+    height: 100%;
+    margin: 0;
+   }
+   
+   .page-content {
+    min-height: calc(100% - 100px); 
+   } */
+
+.footer {
+  height: 40px;
+  background-color: #cc4400;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0.1, 0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: antiquewhite;
+}
+
+.circle-btn {
+  width: 200px;
+  height: 500px;
+  line-height: 200px;
+  text-align: center;
+ }

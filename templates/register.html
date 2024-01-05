@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<br><br>
+<div class="container">
+    <div class="card mx-auto" style="max-width: 400px;">
+        <div class="card-body">
+            <h5 class="card-title">Registration</h5>
+            <br>
+        
+             <form action="{% url 'credentials:register' %}" method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Username</label>
+                    <input type="text" class="form-control" name="username">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" name="password">
+                  </div>
+              
+                  <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+                      <input type="password" class="form-control" name="cpassword">
+                    </div>
+              
+              
+                  <button type="submit" class="btn btn-primary">Submit</button>
+             </form>
+             <br>
+             {% if messages %}
+  <ul class="messages">
+    {% for message in messages %}
+      <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+        </div>
+    </div>
+   
+</div>
+{% endblock content %}
+    

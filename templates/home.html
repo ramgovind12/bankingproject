@@ -5,15 +5,36 @@
 
 {% block content %}
 <br><br>
-<!-- <div>
-    <img src="{% static 'img/bannerbank.png' %}" alt="Our Products" width="1295px" height="450px">
-</div> -->
 
-<div
-class="container d-flex justify-content-center align-items-center"
-style="height: 50vh"
->
-<a class="btn btn-danger" href="{% url 'credentials:login' %}">Start Your Journey with Us</a>
+<div class="jumbotron text-center">
+    <h1>Welcome to Horizon Bank</h1>
+    <p>We offer secure and reliable banking services.</p>
+</div>
+<br>
+<div class="container bg-light">
+    <h2 class="text-center">Our Services</h2>
+    <br>
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Savings Account</h3>
+            <p>A great place to save your money and earn interest.</p>
+        </div>
+        <div class="col-md-4">
+            <h3>Current Account</h3>
+            <p>A simple way to manage your everyday expenses.</p>
+        </div>
+        <div class="col-md-4">
+            <h3>Loans</h3>
+            <p>Access various types of loans to meet your financial needs.</p>
+        </div>
+    </div>
+</div>
+
+<div class="container d-flex justify-content-center align-items-center" style="height: 50vh">
+    <a class="btn btn-danger" href="{% url 'credentials:login' %}">Start Your Journey with Us</a>
 </div>
 {% endblock content %}
+
+
+
     

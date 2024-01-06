@@ -19,7 +19,7 @@ class Person(models.Model):
     name = models.CharField(max_length = 250)
     DOB = models.DateField()
     age = models.IntegerField()
-    gender = models.CharField(max_length=10,choices=[('male','Male'),('female','Female'),('other','Other')])
+    gender = models.CharField(max_length=10,choices=[('male','Male'),('female','Female'),('other','Other')],default=None)
     phone = models.CharField(max_length=12)
     email = models.EmailField()
     address = models.TextField()

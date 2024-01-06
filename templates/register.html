@@ -6,27 +6,31 @@
 <div class="container">
     <div class="card mx-auto" style="max-width: 400px;">
         <div class="card-body">
-            <h5 class="card-title">Registration</h5>
+            <h5 class="card-title d-flex justify-content-center">Registration</h5>
             <br>
         
              <form action="{% url 'credentials:register' %}" method="post">
                 {% csrf_token %}
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Username</label>
-                    <input type="text" class="form-control" name="username">
+
+                    <input type="text" class="form-control" name="username" placeholder="Username">
                   </div>
+                  <br>
                   <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" name="password">
+
+                    <input type="password" class="form-control" name="password" placeholder="Password">
                   </div>
-              
+                  <br>
                   <div class="mb-3">
-                      <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
-                      <input type="password" class="form-control" name="cpassword">
+
+                      <input type="password" class="form-control" name="cpassword" placeholder="Confirm Password">
                     </div>
               
-              
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                    <br>
+                    <div class="d-flex justify-content-center">
+                      <button type="submit" class="btn btn-primary ">Submit</button>
+                  </div>
+                  
              </form>
              <br>
              {% if messages %}

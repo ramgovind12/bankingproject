@@ -1,10 +1,17 @@
 {% extends 'base.html' %}
 
-
+{% load static %}
 {% block content %}
-    <div class="container d-flex justify-content-center align-items-center" style="height: 50vh">
-        <h2>Application Accepted</h2><br><br>
+<div class="container">
+    <div class="d-flex justify-content-center align-items-center" style="height: 25vh">
+        <h2>Application Accepted</h2>
+    </div>
+    <div class="text-center">
         <a class="btn btn-warning" href="{% url 'bank:home' %}">Return Home</a>
     </div>
+</div>
+
+    
+    
 {% endblock content %}
     

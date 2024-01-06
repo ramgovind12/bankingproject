@@ -12,14 +12,6 @@
     text-transform: uppercase;
 }
 
-/* html, body {
-    height: 100%;
-    margin: 0;
-   }
-   
-   .page-content {
-    min-height: calc(100% - 100px); 
-   } */
 
 .footer {
   height: 40px;
@@ -40,3 +32,22 @@
   line-height: 200px;
   text-align: center;
  }
+
+ .bg-light {
+  background-color: #f8f9fa !important;
+}
+
+.jumbotron {
+  background-color: #333;
+  color: #fff;
+}
+
+.btn-danger {
+  background-color: #d9534f;
+  border-color: #d9534f;
+}
+
+.btn-danger:hover {
+  background-color: #b92c28;
+  border-color: #b92c28;
+}

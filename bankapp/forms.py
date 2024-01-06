@@ -9,6 +9,7 @@ class PersonCreationForm(forms.ModelForm):
         
         widgets = {
         'DOB': forms.DateInput(attrs={'type': 'date'}),
+        'gender': forms.RadioSelect(choices=[('male', 'Male'), ('female', 'Female'), ('other', 'Other')]),
     }
         
         
@@ -22,11 +23,10 @@ class PersonCreationForm(forms.ModelForm):
         }
 
         for field_name, field in self.fields.items():
-            # Apply common styling to text and email input fields
+ 
             if isinstance(field.widget, (TextInput, EmailInput)):
                 field.widget.attrs.update(common_attrs)
             
-            # Apply common styling to choice fields (e.g., dropdowns)
             elif isinstance(field.widget, forms.Select):
                 select_attrs = {
                     'class': 'form-control',
@@ -36,12 +36,14 @@ class PersonCreationForm(forms.ModelForm):
                 field.widget.attrs.update(select_attrs)
 
             
-            # Apply common styling to checkboxes
+            
             elif isinstance(field.widget, forms.CheckboxInput):
                 field.widget.attrs.update({'class': 'form-check-input'})
                 
             elif field_name in ['age', 'address']:
                 field.widget.attrs.update(common_attrs)
+                
+        self.fields['gender'].empty_label = None
         
         if 'district' in self.data:
             try:
